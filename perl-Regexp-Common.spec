@@ -1,6 +1,6 @@
 Name: 		perl-Regexp-Common
 Version: 	2.120
-Release: 	1%{?dist}
+Release: 	2%{?dist}
 Summary: 	Regexp::Common Perl module
 License: 	Artistic
 Group: 		Development/Libraries
@@ -26,7 +26,6 @@ make %{?_smp_mflags}
 rm -rf $RPM_BUILD_ROOT
 make pure_install PERL_INSTALL_ROOT=$RPM_BUILD_ROOT
 find $RPM_BUILD_ROOT -type f -name .packlist -exec rm -f {} ';'
-find $RPM_BUILD_ROOT -type f -name '*.bs' -a -size 0 -exec rm -f {} ';'
 find $RPM_BUILD_ROOT -type d -depth -exec rmdir {} 2>/dev/null ';'
 chmod -R u+w $RPM_BUILD_ROOT/*
 
@@ -39,13 +38,12 @@ make test
 %files
 %defattr(-,root,root,-)
 %doc TODO README
-%{perl_vendorlib}/*
+%{perl_vendorlib}/Regexp
 %{_mandir}/man3/*
 
 %changelog
-* Thu Aug 11 2005 Ralf Corsepius <ralf@links2linux.de> - 1.120-1
-- FE submission.
+* Thu Aug 11 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-2
+- Spec cleanup.
 
-* Mon Mar 21 2005 Ralf Corsepius <ralf@links2linux.de> - 1.120-0.pm.2
-- Initial packman version.
-- Update to FE standards.
+* Thu Aug 11 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-1
+- FE submission.
