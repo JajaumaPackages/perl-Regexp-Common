@@ -1,6 +1,6 @@
 Name: 		perl-Regexp-Common
 Version: 	2.120
-Release: 	2%{?dist}
+Release: 	3%{?dist}
 Summary: 	Regexp::Common Perl module
 License: 	Artistic
 Group: 		Development/Libraries
@@ -9,7 +9,6 @@ Source0: 	http://www.cpan.org/modules/by-module/Regexp/Regexp-Common-%{version}.
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch: noarch
-BuildRequires:	perl
 Requires:  	perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
@@ -42,7 +41,10 @@ make test
 %{_mandir}/man3/*
 
 %changelog
-* Thu Aug 11 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-2
+* Thu Aug 20 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-3
+- Further spec cleanup.
+
+* Thu Aug 20 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-2
 - Spec cleanup.
 
 * Thu Aug 11 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-1
