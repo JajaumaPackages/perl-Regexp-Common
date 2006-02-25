@@ -1,11 +1,11 @@
 Name: 		perl-Regexp-Common
 Version: 	2.120
-Release: 	3%{?dist}
+Release: 	4%{?dist}
 Summary: 	Regexp::Common Perl module
 License: 	Artistic
 Group: 		Development/Libraries
 URL: 		http://search.cpan.org/dist/Regexp-Common/
-Source0: 	http://www.cpan.org/modules/by-module/Regexp/Regexp-Common-%{version}.tar.gz
+Source0: 	http://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch: noarch
@@ -41,6 +41,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Sat Feb 25 2006 Ralf Corsépius <rc040203@freenet.de> - 2.120-4
+- Rebuild for FC5/perl-5.8.8.
+
 * Thu Aug 20 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-3
 - Further spec cleanup.
 
