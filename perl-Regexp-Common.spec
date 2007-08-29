@@ -1,6 +1,6 @@
 Name: 		perl-Regexp-Common
 Version: 	2.120
-Release: 	5%{?dist}
+Release: 	6%{?dist}
 Summary: 	Regexp::Common Perl module
 License: 	Artistic
 Group: 		Development/Libraries
@@ -9,6 +9,7 @@ Source0: 	http://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-%{version}.t
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch: noarch
+BuildRequires:  perl(ExtUtils::MakeMaker)
 Requires:  	perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
@@ -41,6 +42,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Wed Aug 29 2007 Ralf Corsépius <rc040203@freenet.de> - 2.120-6
+- BR: perl(ExtUtils::MakeMaker).
+
 * Tue Sep 05 2006 Ralf Corsépius <rc040203@freenet.de> - 2.120-5
 - Mass rebuild.
 
