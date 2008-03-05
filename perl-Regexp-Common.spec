@@ -1,6 +1,6 @@
 Name: 		perl-Regexp-Common
 Version: 	2.120
-Release: 	6%{?dist}
+Release: 	7%{?dist}
 Summary: 	Regexp::Common Perl module
 License: 	Artistic
 Group: 		Development/Libraries
@@ -42,6 +42,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Wed Mar  5 2008 Tom "spot" Callaway <tcallawa@redhat.com> - 2.120-7
+- rebuild for new perl
+
 * Wed Aug 29 2007 Ralf Corsépius <rc040203@freenet.de> - 2.120-6
 - BR: perl(ExtUtils::MakeMaker).
 
