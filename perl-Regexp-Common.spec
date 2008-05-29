@@ -1,8 +1,10 @@
 Name: 		perl-Regexp-Common
-Version: 	2.120
-Release: 	7%{?dist}
+Version: 	2.122
+Release: 	1%{?dist}
 Summary: 	Regexp::Common Perl module
-License: 	Artistic
+# Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
+# Also, it would throw off the automated license check and flag this package.
+License: 	Artistic 2.0 or MIT or BSD
 Group: 		Development/Libraries
 URL: 		http://search.cpan.org/dist/Regexp-Common/
 Source0: 	http://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-%{version}.tar.gz
@@ -42,6 +44,10 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Thu May 29 2008 Tom "spot" Callaway <tcallawa@redhat.com> - 2.122-1
+- update to 2.122
+- license change
+
 * Wed Mar  5 2008 Tom "spot" Callaway <tcallawa@redhat.com> - 2.120-7
 - rebuild for new perl
 
