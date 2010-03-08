@@ -1,6 +1,6 @@
 Name: 		perl-Regexp-Common
-Version: 	2.122
-Release: 	4%{?dist}
+Version: 	2010010201
+Release: 	1%{?dist}
 Summary: 	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
 # Also, it would throw off the automated license check and flag this package.
@@ -12,6 +12,12 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch: noarch
 BuildRequires:  perl(ExtUtils::MakeMaker)
+
+# for improved tests
+BuildRequires:  perl(Test::More)
+BuildRequires:  perl(Test::Pod)
+BuildRequires:  perl(Test::Pod::Coverage)
+
 Requires:  	perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
@@ -44,6 +50,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Mon Mar 08 2010 Ralf Corsépius - 2010010201-1
+- Upstream update.
+
 * Mon Dec  7 2009 Stepan Kasal <skasal@redhat.com> - 2.122-4
 - rebuild against perl 5.10.1
 
