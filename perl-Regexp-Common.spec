@@ -53,7 +53,7 @@ make test
 * Thu May 06 2010 Marcela Maslanova <mmaslano@redhat.com> - 2010010201-2
 - Mass rebuild with perl-5.12.0
 
-* Mon Mar 08 2010 Ralf Corsépius - 2010010201-1
+* Mon Mar 08 2010 Ralf Corsépius <corsepiu@fedoraproject.org> - 2010010201-1
 - Upstream update.
 
 * Mon Dec  7 2009 Stepan Kasal <skasal@redhat.com> - 2.122-4
