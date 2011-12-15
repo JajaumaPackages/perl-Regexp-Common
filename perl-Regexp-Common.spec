@@ -1,23 +1,23 @@
-Name: 		perl-Regexp-Common
-Version: 	2011041701
-Release: 	2%{?dist}
-Summary: 	Regexp::Common Perl module
+Name:		perl-Regexp-Common
+Version:	2011121001
+Release:	1%{?dist}
+Summary:	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
 # Also, it would throw off the automated license check and flag this package.
-License: 	Artistic 2.0 or MIT or BSD
-Group: 		Development/Libraries
-URL: 		http://search.cpan.org/dist/Regexp-Common/
-Source0: 	http://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-%{version}.tar.gz
+License:	Artistic 2.0 or MIT or BSD
+Group:		Development/Libraries
+URL:		http://search.cpan.org/dist/Regexp-Common/
+Source0:	http://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-%{version}.tar.gz
 
 BuildArch: noarch
-BuildRequires:  perl(ExtUtils::MakeMaker)
+BuildRequires:	perl(ExtUtils::MakeMaker)
 
 # for improved tests
-BuildRequires:  perl(Test::More)
-BuildRequires:  perl(Test::Pod)
-BuildRequires:  perl(Test::Pod::Coverage)
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Test::Pod)
+BuildRequires:	perl(Test::Pod::Coverage)
 
-Requires:  	perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
+Requires:	perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
 Regexp::Common - Provide commonly requested regular expressions
@@ -45,6 +45,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Thu Dec 15 2011 Ralf Corsépius <corsepiu@fedoraproject.org> - 2011121001-1
+- Upstream update.
+
 * Mon Jun 20 2011 Marcela Mašláňová <mmaslano@redhat.com> - 2011041701-2
 - Perl mass rebuild
 
