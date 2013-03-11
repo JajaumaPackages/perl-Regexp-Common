@@ -1,6 +1,6 @@
 Name:		perl-Regexp-Common
-Version:	2011121001
-Release:	5%{?dist}
+Version:	2013030901
+Release:	1%{?dist}
 Summary:	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
 # Also, it would throw off the automated license check and flag this package.
@@ -45,6 +45,10 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Mon Mar 11 2013 Ralf Corsépius <corsepiu@fedoraproject.org> - 2013030901-1
+- Upstream update.
+- Fix bogus changelog dates.
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2011121001-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
@@ -104,10 +108,10 @@ make test
 * Sat Feb 25 2006 Ralf Corsépius <rc040203@freenet.de> - 2.120-4
 - Rebuild for FC5/perl-5.8.8.
 
-* Thu Aug 20 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-3
+* Sat Aug 20 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-3
 - Further spec cleanup.
 
-* Thu Aug 20 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-2
+* Sat Aug 20 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-2
 - Spec cleanup.
 
 * Thu Aug 11 2005 Ralf Corsepius <ralf@links2linux.de> - 2.120-1
