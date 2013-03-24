@@ -1,6 +1,6 @@
 Name:		perl-Regexp-Common
 Version:	2013031301
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
 # Also, it would throw off the automated license check and flag this package.
@@ -11,6 +11,7 @@ Source0:	http://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-%{version}.ta
 
 BuildArch: noarch
 BuildRequires:	perl(ExtUtils::MakeMaker)
+BuildRequires:  perl(Carp)
 
 # for improved tests
 BuildRequires:	perl(Test::More)
@@ -45,6 +46,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Sun Mar 24 2013 Ralf Corsépius <corsepiu@fedoraproject.org> - 2013031301-2
+- Add BR: perl(Carp).
+
 * Thu Mar 21 2013 Ralf Corsépius <corsepiu@fedoraproject.org> - 2013031301-1
 - Upstream update.
 
