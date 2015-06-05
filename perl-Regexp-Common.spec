@@ -1,6 +1,6 @@
 Name:		perl-Regexp-Common
 Version:	2013031301
-Release:	6%{?dist}
+Release:	7%{?dist}
 Summary:	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
 # Also, it would throw off the automated license check and flag this package.
@@ -46,6 +46,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Fri Jun 05 2015 Jitka Plesnikova <jplesnik@redhat.com> - 2013031301-7
+- Perl 5.22 rebuild
+
 * Wed Aug 27 2014 Jitka Plesnikova <jplesnik@redhat.com> - 2013031301-6
 - Perl 5.20 rebuild
 
