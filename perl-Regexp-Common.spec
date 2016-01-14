@@ -1,6 +1,6 @@
 Name:		perl-Regexp-Common
-Version:	2013031301
-Release:	8%{?dist}
+Version:	2016010801
+Release:	1%{?dist}
 Summary:	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
 # Also, it would throw off the automated license check and flag this package.
@@ -12,6 +12,13 @@ Source0:	http://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-%{version}.ta
 BuildArch: noarch
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Carp)
+BuildRequires:  perl(Config)
+BuildRequires:  perl(Exporter)
+BuildRequires:  perl(overload)
+BuildRequires:  perl(re)
+BuildRequires:  perl(strict)
+BuildRequires:  perl(vars)
+BuildRequires:  perl(warnings)
 
 # for improved tests
 BuildRequires:	perl(Test::More)
@@ -33,19 +40,22 @@ make %{?_smp_mflags}
 %install
 make pure_install PERL_INSTALL_ROOT=$RPM_BUILD_ROOT
 find $RPM_BUILD_ROOT -type f -name .packlist -exec rm -f {} ';'
-find $RPM_BUILD_ROOT -type d -depth -exec rmdir {} 2>/dev/null ';'
 chmod -R u+w $RPM_BUILD_ROOT/*
 
 %check
 make test
 
 %files
-%defattr(-,root,root,-)
 %doc TODO README
 %{perl_vendorlib}/Regexp
 %{_mandir}/man3/*
 
 %changelog
+* Thu Jan 14 2016 Ralf Corsépius <corsepiu@fedoraproject.org> - 2016010801-1
+- Upstream update.
+- Expand BR:s.
+- Modernize spec.
+
 * Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2013031301-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
