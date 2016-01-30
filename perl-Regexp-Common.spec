@@ -1,6 +1,6 @@
 Name:		perl-Regexp-Common
 Version:	2016010801
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
 # Also, it would throw off the automated license check and flag this package.
@@ -34,12 +34,11 @@ Regexp::Common - Provide commonly requested regular expressions
 %setup -q -n Regexp-Common-%{version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+%{__perl} Makefile.PL INSTALLDIRS=vendor NO_PACKLIST=1
 make %{?_smp_mflags}
 
 %install
 make pure_install PERL_INSTALL_ROOT=$RPM_BUILD_ROOT
-find $RPM_BUILD_ROOT -type f -name .packlist -exec rm -f {} ';'
 chmod -R u+w $RPM_BUILD_ROOT/*
 
 %check
@@ -51,6 +50,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Sat Jan 30 2016 Ralf Corsépius <corsepiu@fedoraproject.org> - 2016010801-2
+- Modernize spec.
+
 * Thu Jan 14 2016 Ralf Corsépius <corsepiu@fedoraproject.org> - 2016010801-1
 - Upstream update.
 - Expand BR:s.
