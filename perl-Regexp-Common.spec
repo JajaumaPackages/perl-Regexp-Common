@@ -1,6 +1,6 @@
 Name:		perl-Regexp-Common
 Version:	2016010801
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
 # Also, it would throw off the automated license check and flag this package.
@@ -50,6 +50,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 2016010801-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
 * Sat Jan 30 2016 Ralf Corsépius <corsepiu@fedoraproject.org> - 2016010801-2
 - Modernize spec.
 
