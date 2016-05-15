@@ -1,6 +1,6 @@
 Name:		perl-Regexp-Common
 Version:	2016020301
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
 # Also, it would throw off the automated license check and flag this package.
@@ -51,6 +51,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Sun May 15 2016 Jitka Plesnikova <jplesnik@redhat.com> - 2016020301-2
+- Perl 5.24 rebuild
+
 * Sun Feb 14 2016 Ralf Corsépius <corsepiu@fedoraproject.org> - 2016020301-1
 - Upstream update.
 - Add BR: perl(Test::Regexp).
