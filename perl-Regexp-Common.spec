@@ -1,6 +1,6 @@
 Name:		perl-Regexp-Common
-Version:	2016020301
-Release:	2%{?dist}
+Version:	2016060101
+Release:	1%{?dist}
 Summary:	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
 # Also, it would throw off the automated license check and flag this package.
@@ -10,6 +10,9 @@ URL:		http://search.cpan.org/dist/Regexp-Common/
 Source0:	http://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-%{version}.tar.gz
 
 BuildArch: noarch
+
+%bcond_with author_tests
+
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(Config)
@@ -22,9 +25,12 @@ BuildRequires:  perl(warnings)
 
 # for improved tests
 BuildRequires:	perl(Test::More)
-BuildRequires:	perl(Test::Pod)
-BuildRequires:	perl(Test::Pod::Coverage)
 BuildRequires:	perl(Test::Regexp)
+
+%if %{with author_tests}
+BuildRequires:  perl(Test::Pod)
+BuildRequires:  perl(Test::Pod::Coverage)
+%endif
 
 Requires:	perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
@@ -43,7 +49,7 @@ make pure_install PERL_INSTALL_ROOT=$RPM_BUILD_ROOT
 chmod -R u+w $RPM_BUILD_ROOT/*
 
 %check
-make test
+make %{?with_author_tests:AUTHOR_TESTING=1} test
 
 %files
 %doc TODO README
@@ -51,6 +57,10 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Thu Jun 02 2016 Ralf Corsépius <corsepiu@fedoraproject.org> - 2016060101-1
+- Upstream update to 2016060101.
+- Add conditional author_tests.
+
 * Sun May 15 2016 Jitka Plesnikova <jplesnik@redhat.com> - 2016020301-2
 - Perl 5.24 rebuild
 
