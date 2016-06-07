@@ -1,5 +1,5 @@
 Name:		perl-Regexp-Common
-Version:	2016060101
+Version:	2016060201
 Release:	1%{?dist}
 Summary:	Regexp::Common Perl module
 # Old Artistic 1.0 is also valid, but we won't list it here since it is non-free.
@@ -57,6 +57,9 @@ make %{?with_author_tests:AUTHOR_TESTING=1} test
 %{_mandir}/man3/*
 
 %changelog
+* Tue Jun 07 2016 Ralf Corsépius <corsepiu@fedoraproject.org> - 2016060201-1
+- Upstream update to 2016060201.
+
 * Thu Jun 02 2016 Ralf Corsépius <corsepiu@fedoraproject.org> - 2016060101-1
 - Upstream update to 2016060101.
 - Add conditional author_tests.
