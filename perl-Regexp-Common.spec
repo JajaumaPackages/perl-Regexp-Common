@@ -11,6 +11,7 @@ Source0:	http://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-%{version}.ta
 
 BuildArch: noarch
 
+BuildRequires:	perl-generators
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(Config)
