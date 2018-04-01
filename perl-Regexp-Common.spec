@@ -44,6 +44,7 @@ Regexp::Common - Provide commonly requested regular expressions
 %install
 %{__make} pure_install PERL_INSTALL_ROOT=$RPM_BUILD_ROOT
 chmod -R u+w $RPM_BUILD_ROOT/*
+find $RPM_BUILD_ROOT -type f -name .packlist -delete
 
 %check
 %{__make} test
